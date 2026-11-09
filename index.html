@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestão de CS · plugin para o Claude Code</title>
+<meta name="description" content="Plugin grátis para o Claude Code, em português: o seu Customer Success em 10 áreas, com a IA organizando os dados e você aprovando as ações.">
+<meta property="og:title" content="Gestão de CS: o seu CS em 10 áreas">
+<meta property="og:description" content="A IA organiza. Você fica no centro. Plugin grátis para o Claude Code, em teste.">
+<meta property="og:image" content="https://edumamede.github.io/gestao-de-cs/capa.png">
+<meta property="og:url" content="https://edumamede.github.io/gestao-de-cs/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* Identidade de 09/11/2026: cerca de 50% verde, 40% creme e 10% laranja. O laranja fica só no destaque. */
+  :root {
+    --verde: #0F4A38;
+    --verde-escuro: #0B3327;
+    --creme: #F6EFE3;
+    --creme-2: #EADFCB;
+    --laranja: #FF6A13;
+    --pessego: #FFD9B8;
+    --sobre-laranja: #1A0E05;
+    --suave: #BFD3C6;
+    --linha-clara: rgba(246, 239, 227, .25);
+    --linha-escura: rgba(11, 51, 39, .2);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--verde); color: var(--creme); font-family: "Inter", "Segoe UI", system-ui, Arial, sans-serif; line-height: 1.55; }
+  .dentro { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  code { font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: .92em; padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  h1, h2 { font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-weight: 400; text-transform: uppercase; line-height: 1.1; margin: 0; }
+  h1 em, h2 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; text-transform: none; font-weight: 400; }
+  h1 { font-size: clamp(48px, 8vw, 86px); }
+  h1 em { font-size: 1.02em; }
+  h2 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 22px; }
+  h3 { margin: 0 0 6px; font-size: 20px; font-weight: 800; }
+
+  /* Faixas verdes */
+  .verde { background: var(--verde); color: var(--creme); }
+  .verde h1 em, .verde h2 em { color: var(--pessego); }
+  .verde a { color: var(--pessego); }
+  .verde code { background: var(--verde-escuro); color: var(--creme); }
+  .verde p, .verde li, .verde td { color: var(--suave); }
+  .verde b, .verde td:first-child { color: var(--creme); }
+
+  /* Faixas creme */
+  .creme { background: var(--creme); color: var(--verde-escuro); }
+  .creme h2 em { color: var(--verde); }
+  .creme a { color: var(--verde-escuro); font-weight: 600; }
+  .creme code { background: var(--creme-2); color: var(--verde-escuro); }
+
+  section { padding: 56px 0; }
+  .abre { padding: 44px 0 56px; }
+  .abre .grade { display: grid; grid-template-columns: 1.15fr .85fr; gap: 36px; align-items: center; }
+  .selo { font-weight: 800; font-size: 14px; letter-spacing: .28em; text-transform: uppercase; color: var(--suave); }
+  .abre h1 { margin: 20px 0 18px; }
+  .abre p { font-size: 19px; margin: 0 0 26px; max-width: 34em; }
+  .botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+  .botao { display: inline-block; text-decoration: none; font-weight: 800; font-size: 18px; padding: 15px 26px; border-radius: 999px; }
+  .botao.cheio, .verde a.botao.cheio, .creme a.botao.cheio { background: var(--laranja); color: var(--sobre-laranja); }
+  .verde a.botao.vazio { color: var(--creme); border: 2px solid var(--linha-clara); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--laranja); outline-offset: 3px; }
+  video { width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 22px; display: block; background: var(--verde-escuro); }
+
+  .areas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0; list-style: none; margin: 0; }
+  .areas li { background: #FFFFFF; border: 1px solid var(--linha-escura); border-radius: 16px; padding: 16px 18px; }
+  .areas b { display: block; font-size: 18px; }
+  .areas .n { font: 800 13px Consolas, Menlo, monospace; color: var(--verde); letter-spacing: .08em; }
+
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 13px 10px; border-bottom: 1px solid var(--linha-clara); vertical-align: top; }
+  td:first-child { white-space: nowrap; }
+
+  .passo { display: grid; grid-template-columns: 48px 1fr; gap: 14px; background: #FFFFFF; border: 1px solid var(--linha-escura); border-radius: 18px; padding: 20px; margin: 0 0 14px; }
+  .num { width: 44px; height: 44px; border-radius: 50%; background: var(--verde); color: var(--creme); display: grid; place-items: center; font-family: "Anton", Impact, sans-serif; font-size: 22px; }
+  .passo > div { min-width: 0; }
+  .passo p { margin: 6px 0; }
+  pre { background: var(--verde-escuro); border-radius: 12px; padding: 14px 16px; overflow-x: auto; margin: 10px 0; }
+  .creme pre code { background: none; padding: 0; font-size: 15px; color: var(--creme); overflow-wrap: normal; }
+  button.copiar { background: var(--verde); color: var(--creme); border: 0; border-radius: 999px; padding: 9px 16px; font-weight: 800; font-size: 15px; cursor: pointer; font-family: inherit; }
+
+  .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  ul.lista { padding-left: 22px; margin: 0; }
+  ul.lista li { margin: 9px 0; }
+
+  .fim { border-top: 10px solid var(--laranja); }
+  .fim p { font-size: 18px; margin: 0 0 10px; max-width: 40em; }
+  .rodape { font-size: 14px; padding: 22px 0 36px; }
+  .rodape, .verde .rodape { color: var(--suave); }
+
+  @media (max-width: 760px) {
+    .abre .grade, .duas { grid-template-columns: 1fr; }
+    .areas { grid-template-columns: 1fr; }
+    td:first-child { white-space: normal; }
+    section { padding: 40px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { video { display: none; } }
+</style>
+</head>
+<body>
+  <header class="abre verde">
+    <div class="dentro grade">
+      <div>
+        <span class="selo">Grátis · em teste · versão 0.9</span>
+        <h1>O seu CS em 10 áreas. <em>A IA organiza.</em> Você fica no centro.</h1>
+        <p>Um plugin em português para o Claude Code. Ele lê os exports que você já tem e organiza o Customer Success: health score, conta parada, previsão de churn, oportunidades, a reunião pronta e a semana do time. Você aprova as ações.</p>
+        <div class="botoes">
+          <a class="botao cheio" href="gestao-de-cs.zip" download>Baixar o zip</a>
+          <a class="botao vazio" href="#instalar">Como instalar</a>
+        </div>
+      </div>
+      <video src="mapa.mp4" poster="capa.png" autoplay muted loop playsinline aria-label="As 10 áreas ligadas à IA, com você no centro aprovando"></video>
+    </div>
+  </header>
+
+  <main>
+    <section class="creme">
+      <div class="dentro">
+        <h2>O que ele <em>cobre</em></h2>
+        <ul class="areas">
+          <li><span class="n">01</span><b>Estratégia e segmentação</b><span>Quem é o seu cliente ideal, e quem não é.</span></li>
+          <li><span class="n">02</span><b>Jornada do cliente</b><span>Cada etapa com prazo, e quem age quando a conta para.</span></li>
+          <li><span class="n">03</span><b>Onboarding</b><span>O que empacou, e se o motivo é do cliente ou seu.</span></li>
+          <li><span class="n">04</span><b>Adoção e acompanhamento</b><span>A conta comparada com ela mesma. Mudou o padrão, avisa.</span></li>
+          <li><span class="n">05</span><b>Contas-chave</b><span>As poucas que seguram a receita, com tudo à mão.</span></li>
+          <li><span class="n">06</span><b>Saúde e risco</b><span>O health score com a sua régua e o plano para quem está em risco.</span></li>
+          <li><span class="n">07</span><b>Renovação e expansão</b><span>A reunião pronta, com o gráfico, e as oportunidades de upgrade.</span></li>
+          <li><span class="n">08</span><b>Voz do cliente e indicação</b><span>Pesquisa, NPS e com quem conversar.</span></li>
+          <li><span class="n">09</span><b>Dados e operação</b><span>As metas e o que ainda falta medir. Número não se inventa.</span></li>
+          <li><span class="n">10</span><b>Time, rituais e cultura</b><span>A semana montada, com o mais crucial primeiro.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="verde">
+      <div class="dentro">
+        <h2>Os <em>comandos</em></h2>
+        <table>
+          <tr><td><code>/gestao-de-cs:consultor</code></td><td>Comece por aqui. Conduz o checklist e monta a pasta da empresa.</td></tr>
+          <tr><td><code>/gestao-de-cs:analista</code></td><td>Lê o export, mede as rotinas e gera o health score e as previsões.</td></tr>
+          <tr><td><code>/gestao-de-cs:semana</code></td><td>Monta a semana do time: o mais crucial e quem age.</td></tr>
+          <tr><td><code>/gestao-de-cs:contas</code></td><td>Contas-chave, renovação, upgrade e a reunião com o PowerPoint.</td></tr>
+          <tr><td><code>/gestao-de-cs:guardiao</code></td><td>Onboarding, conta em risco e troca de contato.</td></tr>
+          <tr><td><code>/gestao-de-cs:melhoria</code></td><td>O que cresce e por quê, pesquisa e NPS.</td></tr>
+          <tr><td><code>/gestao-de-cs:hoje</code></td><td>A página do dia, a mesa de aprovação, as tarefas e a agenda.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="creme" id="instalar">
+      <div class="dentro">
+        <h2>Como <em>instalar</em></h2>
+        <div class="passo">
+          <div class="num">1</div>
+          <div>
+            <h3>Tenha o que ele precisa</h3>
+            <p>O <a href="https://code.claude.com">Claude Code</a>, com plano pago, e o Python 3.10 ou mais novo. Se você ainda não tem o Python, o jeito 2 abaixo te ajuda a instalar.</p>
+          </div>
+        </div>
+        <div class="passo">
+          <div class="num">2</div>
+          <div>
+            <h3>Jeito 1: dois comandos no Claude Code</h3>
+            <pre><code id="comandos">/plugin marketplace add EduMamede/gestao-de-cs
+/plugin install gestao-de-cs@gestao-de-cs</code></pre>
+            <button class="copiar" type="button" data-alvo="comandos">Copiar os comandos</button>
+            <p>Antes, instale as bibliotecas do Python com <code>python -m pip install openpyxl xlsxwriter</code>. Depois abra uma sessão nova e digite <code>/gestao-de-cs:consultor</code>.</p>
+          </div>
+        </div>
+        <div class="passo">
+          <div class="num">3</div>
+          <div>
+            <h3>Jeito 2: pelo zip, sem comando</h3>
+            <p><a href="gestao-de-cs.zip" download>Baixe o zip</a>, extraia em Documentos e abra a pasta <code>Gestao de CS</code> no Claude Code. O arquivo <code>COMECE-AQUI.html</code> tem um texto para colar: o Claude confere o Python, instala as bibliotecas e registra o plugin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="verde">
+      <div class="dentro duas">
+        <div>
+          <h2>Os seus <em>dados</em></h2>
+          <ul class="lista">
+            <li><b>As contas rodam no seu computador.</b> Nada vem para mim.</li>
+            <li><b>Sem conexão com banco de dados.</b> A entrada é sempre um export em CSV ou XLSX, de onde você tiver: CRM, sistema, financeiro, chamados.</li>
+            <li><b>Modo protegido.</b> Com dado de cliente, a IA trabalha só com códigos, e os nomes reais voltam no fim, colocados pelo script.</li>
+            <li><b>Confira se a sua empresa permite</b> usar IA com esses dados antes de começar.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Antes de <em>usar</em></h2>
+          <ul class="lista">
+            <li><b>Está em teste.</b> Foi testado com dados inventados. Confira os números antes de decidir com base neles.</li>
+            <li><b>Testado no Windows.</b> No Mac, ainda não sei se funciona.</li>
+            <li><b>Uso livre, sem revenda.</b> Baixe e use de graça na sua empresa. Não revenda nem publique como se fosse seu. Veja a <a href="https://github.com/EduMamede/gestao-de-cs/blob/main/LICENSE">licença</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="creme fim">
+      <div class="dentro">
+        <h2>Quer ajudar a <em>melhorar?</em></h2>
+        <p>Me conta onde travou, o que você usaria de verdade na semana e o que faltou. É assim que ele evolui.</p>
+        <p><a href="https://www.linkedin.com/in/eduardomamede">Me chama no LinkedIn</a> · <a href="https://github.com/EduMamede/gestao-de-cs">o código no GitHub</a></p>
+      </div>
+    </section>
+  </main>
+  <div class="verde"><div class="dentro rodape">Feito por Eduardo Mamede, que trabalha com CS desde 2018.</div></div>
+
+<script>
+  document.querySelectorAll('button.copiar').forEach(function (botao) {
+    botao.addEventListener('click', function () {
+      var texto = document.getElementById(botao.dataset.alvo).innerText;
+      var original = botao.textContent;
+      function avisar(msg) { botao.textContent = msg; setTimeout(function () { botao.textContent = original; }, 1800); }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(texto).then(function () { avisar('Copiado'); }, function () { avisar('Selecione e copie'); });
+      } else {
+        avisar('Selecione e copie');
+      }
+    });
+  });
+</script>
+</body>
+</html>
