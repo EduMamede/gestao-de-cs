@@ -1,0 +1,1077 @@
+{
+  "rodada": "2026-11-03",
+  "modo_privacidade": "protegido",
+  "rodada_anterior": null,
+  "arquivos_lidos": [
+    "contas.csv",
+    "chamados.csv"
+  ],
+  "recompra": false,
+  "dados_disponiveis": {
+    "nota": true,
+    "etapa": true,
+    "renovacao": true,
+    "comparacao_de_padrao": true,
+    "canceladas": false
+  },
+  "contas": {
+    "ativas": 40,
+    "canceladas": 0,
+    "com_nota": 38,
+    "sem_nota": 2,
+    "confianca": {
+      "alta": 36,
+      "média": 2,
+      "baixa": 0
+    }
+  },
+  "faixas": {
+    "saudavel": {
+      "contas": 32,
+      "receita": 39500.0
+    },
+    "pode_melhorar": {
+      "contas": 3,
+      "receita": 3000.0
+    },
+    "possivel_churn": {
+      "contas": 3,
+      "receita": 49600.0
+    },
+    "sem_nota": {
+      "contas": 2,
+      "receita": 2000.0
+    }
+  },
+  "formula": {
+    "versao": "02aac818",
+    "mudou_nesta_rodada": false,
+    "mudou_em": null
+  },
+  "regras": {
+    "modelo de receita": "assinatura",
+    "contrato padrao": "",
+    "variacao para alerta": 30.0,
+    "minimo absoluto": 2.0,
+    "cobertura minima": 40.0,
+    "renovacao proxima": 90.0,
+    "sem contato": 60.0,
+    "queda de nota": 15.0,
+    "minimo de casos para prever": 30.0,
+    "aumento minimo de receita": 5.0
+  },
+  "indicadores": [
+    {
+      "id": "plano",
+      "rotina": "Acompanhamento do plano",
+      "bloco": "rotina",
+      "criticidade": "alta",
+      "peso": 3,
+      "contas_medidas": 38,
+      "contas_ativas": 40
+    },
+    {
+      "id": "estoque",
+      "rotina": "Estoque",
+      "bloco": "rotina",
+      "criticidade": "media",
+      "peso": 2,
+      "contas_medidas": 36,
+      "contas_ativas": 40
+    },
+    {
+      "id": "agenda",
+      "rotina": "Agenda",
+      "bloco": "rotina",
+      "criticidade": "media",
+      "peso": 2,
+      "contas_medidas": 36,
+      "contas_ativas": 40
+    },
+    {
+      "id": "pagamento",
+      "rotina": "Pagamento",
+      "bloco": "financeiro",
+      "criticidade": "alta",
+      "peso": 3,
+      "contas_medidas": 38,
+      "contas_ativas": 40
+    },
+    {
+      "id": "chamados",
+      "rotina": "Chamados",
+      "bloco": "chamados",
+      "criticidade": "media",
+      "peso": 2,
+      "contas_medidas": 40,
+      "contas_ativas": 40
+    }
+  ],
+  "prioridades": [
+    {
+      "conta": "CONTA-028",
+      "responsavel": "CSM-02",
+      "pontos": 7,
+      "peso": 336000.0,
+      "receita": 48000.0,
+      "nota": 10,
+      "faixa": "possivel_churn",
+      "matriz": "salvar",
+      "por_que": [
+        "Nota 10 (possível churn)",
+        "Financeiro com problema: Pagamento com nota 0",
+        "Sem contato há 90 dias",
+        "Renova em 45 dias"
+      ],
+      "sinais": [
+        "nota_vermelha",
+        "financeiro",
+        "sem_contato",
+        "renovacao_com_risco"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2026-12-18",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-029",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 6000.0,
+      "receita": 3000.0,
+      "nota": 100,
+      "faixa": "saudavel",
+      "matriz": "crescer",
+      "por_que": [
+        "Acompanhamento do plano caiu 70% (de 40 para 12), com nota boa"
+      ],
+      "sinais": [
+        "padrao_ruim"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-025",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 4000.0,
+      "receita": 2000.0,
+      "nota": 100,
+      "faixa": "saudavel",
+      "matriz": "crescer",
+      "por_que": [
+        "Empacada há 45 dias em Implantação (prazo 20), motivo do cliente"
+      ],
+      "sinais": [
+        "empacado"
+      ],
+      "quem_age": "cliente (CS cobra e ajuda)",
+      "renovacao": "2027-08-30",
+      "proximo_contato": "2026-11-08",
+      "tem_proximo_passo": true
+    },
+    {
+      "conta": "CONTA-034",
+      "responsavel": "CSM-01",
+      "pontos": 4,
+      "peso": 3200.0,
+      "receita": 800.0,
+      "nota": 8,
+      "faixa": "possivel_churn",
+      "matriz": "observar",
+      "por_que": [
+        "Nota 8 (possível churn)",
+        "Financeiro com problema: Pagamento com nota 0"
+      ],
+      "sinais": [
+        "nota_vermelha",
+        "financeiro"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-035",
+      "responsavel": "CSM-01",
+      "pontos": 4,
+      "peso": 3200.0,
+      "receita": 800.0,
+      "nota": 8,
+      "faixa": "possivel_churn",
+      "matriz": "observar",
+      "por_que": [
+        "Nota 8 (possível churn)",
+        "Financeiro com problema: Pagamento com nota 0"
+      ],
+      "sinais": [
+        "nota_vermelha",
+        "financeiro"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-026",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 3000.0,
+      "receita": 1500.0,
+      "nota": 100,
+      "faixa": "saudavel",
+      "matriz": "crescer",
+      "por_que": [
+        "Empacada há 30 dias em Treinamento (prazo 15), motivo nosso"
+      ],
+      "sinais": [
+        "empacado"
+      ],
+      "quem_age": "nós (destravar internamente)",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-040",
+      "responsavel": "CSM-01",
+      "pontos": 0.5,
+      "peso": 2500.0,
+      "receita": 5000.0,
+      "nota": 100,
+      "faixa": "saudavel",
+      "matriz": "crescer",
+      "por_que": [
+        "Renova em 60 dias"
+      ],
+      "sinais": [
+        "renovacao_sozinha"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-01-02",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-027",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 2000.0,
+      "receita": 1000.0,
+      "nota": 100,
+      "faixa": "saudavel",
+      "matriz": "crescer",
+      "por_que": [
+        "Empacada há 10 dias em Kickoff (prazo 7), motivo não informado"
+      ],
+      "sinais": [
+        "empacado"
+      ],
+      "quem_age": "a definir (falta o motivo)",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-031",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 2000.0,
+      "receita": 1000.0,
+      "nota": 46,
+      "faixa": "pode_melhorar",
+      "matriz": "salvar",
+      "por_que": [
+        "Nota 46 (pode melhorar)",
+        "Financeiro com problema: Pagamento com nota 0"
+      ],
+      "sinais": [
+        "nota_amarela",
+        "financeiro"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-032",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 2000.0,
+      "receita": 1000.0,
+      "nota": 46,
+      "faixa": "pode_melhorar",
+      "matriz": "salvar",
+      "por_que": [
+        "Nota 46 (pode melhorar)",
+        "Financeiro com problema: Pagamento com nota 0"
+      ],
+      "sinais": [
+        "nota_amarela",
+        "financeiro"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    },
+    {
+      "conta": "CONTA-033",
+      "responsavel": "CSM-01",
+      "pontos": 2,
+      "peso": 2000.0,
+      "receita": 1000.0,
+      "nota": 46,
+      "faixa": "pode_melhorar",
+      "matriz": "salvar",
+      "por_que": [
+        "Nota 46 (pode melhorar)",
+        "Financeiro com problema: Pagamento com nota 0"
+      ],
+      "sinais": [
+        "nota_amarela",
+        "financeiro"
+      ],
+      "quem_age": "CS",
+      "renovacao": "2027-08-30",
+      "proximo_contato": null,
+      "tem_proximo_passo": false
+    }
+  ],
+  "empacadas": [
+    {
+      "conta": "CONTA-025",
+      "responsavel": "CSM-01",
+      "etapa": "Implantação",
+      "dias_na_etapa": 45.0,
+      "prazo": 20.0,
+      "motivo": "do cliente",
+      "quem_age": "cliente (CS cobra e ajuda)",
+      "nota": 100,
+      "receita": 2000.0,
+      "tem_proximo_passo": true,
+      "proximo_contato": "2026-11-08"
+    },
+    {
+      "conta": "CONTA-026",
+      "responsavel": "CSM-01",
+      "etapa": "Treinamento",
+      "dias_na_etapa": 30.0,
+      "prazo": 15.0,
+      "motivo": "nosso",
+      "quem_age": "nós (destravar internamente)",
+      "nota": 100,
+      "receita": 1500.0,
+      "tem_proximo_passo": false,
+      "proximo_contato": null
+    },
+    {
+      "conta": "CONTA-027",
+      "responsavel": "CSM-01",
+      "etapa": "Kickoff",
+      "dias_na_etapa": 10.0,
+      "prazo": 7.0,
+      "motivo": "não informado",
+      "quem_age": "a definir (falta o motivo)",
+      "nota": 100,
+      "receita": 1000.0,
+      "tem_proximo_passo": false,
+      "proximo_contato": null
+    }
+  ],
+  "alertas_de_padrao": [
+    {
+      "conta": "CONTA-029",
+      "indicador": "plano",
+      "rotina": "Acompanhamento do plano",
+      "antes": 40.0,
+      "agora": 12.0,
+      "variacao_pct": -70,
+      "leitura": "alerta",
+      "nota": 100,
+      "criticidade": "alta"
+    }
+  ],
+  "sinais_bons": [
+    {
+      "conta": "CONTA-030",
+      "indicador": "plano",
+      "rotina": "Acompanhamento do plano",
+      "antes": 10.0,
+      "agora": 25.0,
+      "variacao_pct": 150,
+      "leitura": "bom sinal",
+      "nota": 100,
+      "criticidade": "alta"
+    }
+  ],
+  "renovacoes": [
+    {
+      "conta": "CONTA-028",
+      "dias": 45,
+      "receita": 48000.0,
+      "nota": 10,
+      "com_risco": true
+    },
+    {
+      "conta": "CONTA-040",
+      "dias": 60,
+      "receita": 5000.0,
+      "nota": 100,
+      "com_risco": false
+    }
+  ],
+  "contas_chave": {
+    "existe": false,
+    "quantas": 21,
+    "de_um_total_de": 40,
+    "sem_receita": 0,
+    "pct_receita": 80
+  },
+  "maiores_contas": [
+    {
+      "conta": "CONTA-028",
+      "receita": 48000.0
+    },
+    {
+      "conta": "CONTA-040",
+      "receita": 5000.0
+    },
+    {
+      "conta": "CONTA-029",
+      "receita": 3000.0
+    },
+    {
+      "conta": "CONTA-025",
+      "receita": 2000.0
+    },
+    {
+      "conta": "CONTA-026",
+      "receita": 1500.0
+    }
+  ],
+  "conta_perdida": {},
+  "painel": {
+    "metricas": [
+      {
+        "id": "contas_ativas",
+        "nome": "Contas ativas",
+        "valor": 40,
+        "unidade": "int",
+        "melhor_quando": "maior",
+        "como": "contas que não cancelaram",
+        "detalhe": null
+      },
+      {
+        "id": "receita_ativa",
+        "nome": "Receita ativa",
+        "valor": 94100.0,
+        "unidade": "moeda",
+        "melhor_quando": "maior",
+        "como": "soma da receita das contas ativas",
+        "detalhe": null
+      },
+      {
+        "id": "nota_media",
+        "nome": "Nota média",
+        "valor": 88.5,
+        "unidade": "num",
+        "melhor_quando": "maior",
+        "como": "média simples das contas com nota",
+        "detalhe": null
+      },
+      {
+        "id": "nota_ponderada",
+        "nome": "Nota média pela receita",
+        "valor": 49.7,
+        "unidade": "num",
+        "melhor_quando": "maior",
+        "como": "média das notas com peso pela receita",
+        "detalhe": null
+      },
+      {
+        "id": "pct_saudaveis",
+        "nome": "Contas saudáveis",
+        "valor": 84.2,
+        "unidade": "pct",
+        "melhor_quando": "maior",
+        "como": "contas com nota de 70 para cima, entre as que têm nota",
+        "detalhe": null
+      },
+      {
+        "id": "pct_receita_saudavel",
+        "nome": "Receita em contas saudáveis",
+        "valor": 42.9,
+        "unidade": "pct",
+        "melhor_quando": "maior",
+        "como": "receita das saudáveis sobre a receita das contas com nota",
+        "detalhe": null
+      },
+      {
+        "id": "contas_sem_nota",
+        "nome": "Contas sem nota",
+        "valor": 2,
+        "unidade": "int",
+        "melhor_quando": "menor",
+        "como": "contas sem dado suficiente para dar nota",
+        "detalhe": null
+      },
+      {
+        "id": "receita_em_risco",
+        "nome": "Receita em possível churn",
+        "valor": 49600.0,
+        "unidade": "moeda",
+        "melhor_quando": "menor",
+        "como": "receita das contas com nota abaixo de 30",
+        "detalhe": null
+      },
+      {
+        "id": "contas_empacadas",
+        "nome": "Contas empacadas",
+        "valor": 3,
+        "unidade": "int",
+        "melhor_quando": "menor",
+        "como": "contas além do prazo da etapa",
+        "detalhe": null
+      },
+      {
+        "id": "empacadas_nosso",
+        "nome": "Empacadas por nós",
+        "valor": 1,
+        "unidade": "int",
+        "melhor_quando": "menor",
+        "como": "empacadas com motivo nosso",
+        "detalhe": null
+      },
+      {
+        "id": "empacadas_cliente",
+        "nome": "Empacadas pelo cliente",
+        "valor": 1,
+        "unidade": "int",
+        "melhor_quando": "menor",
+        "como": "empacadas com motivo do cliente",
+        "detalhe": null
+      },
+      {
+        "id": "alertas_de_padrao",
+        "nome": "Alertas de mudança de padrão",
+        "valor": 1,
+        "unidade": "int",
+        "melhor_quando": "menor",
+        "como": "contas que mudaram o próprio padrão para pior",
+        "detalhe": null
+      },
+      {
+        "id": "renovacoes_90d",
+        "nome": "Renovações na janela",
+        "valor": 2,
+        "unidade": "int",
+        "melhor_quando": null,
+        "como": "contas que renovam dentro da janela combinada",
+        "detalhe": null
+      },
+      {
+        "id": "receita_renovando",
+        "nome": "Receita renovando na janela",
+        "valor": 53000.0,
+        "unidade": "moeda",
+        "melhor_quando": null,
+        "como": "receita das contas que renovam dentro da janela",
+        "detalhe": null
+      },
+      {
+        "id": "churn_contas_30d",
+        "nome": "Churn de contas em 30 dias",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "menor",
+        "como": "canceladas em 30 dias sobre as contas que existiam no início",
+        "detalhe": null
+      },
+      {
+        "id": "churn_contas_90d",
+        "nome": "Churn de contas em 90 dias",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "menor",
+        "como": "canceladas em 90 dias sobre as contas que existiam no início",
+        "detalhe": null
+      },
+      {
+        "id": "churn_contas_12m",
+        "nome": "Churn de contas em 12 meses",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "menor",
+        "como": "canceladas em 365 dias sobre as contas que existiam no início",
+        "detalhe": null
+      },
+      {
+        "id": "churn_receita_30d",
+        "nome": "Churn de receita em 30 dias",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "menor",
+        "como": "receita cancelada em 30 dias sobre a receita de quem existia no início",
+        "detalhe": null
+      },
+      {
+        "id": "churn_receita_90d",
+        "nome": "Churn de receita em 90 dias",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "menor",
+        "como": "receita cancelada em 90 dias sobre a receita de quem existia no início",
+        "detalhe": null
+      },
+      {
+        "id": "churn_receita_12m",
+        "nome": "Churn de receita em 12 meses",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "menor",
+        "como": "receita cancelada em 365 dias sobre a receita de quem existia no início",
+        "detalhe": null
+      },
+      {
+        "id": "nps",
+        "nome": "NPS consolidado",
+        "valor": 67,
+        "unidade": "num",
+        "melhor_quando": "maior",
+        "como": "promotores menos detratores, sobre quem respondeu. Serve para ver a tendência da base",
+        "detalhe": null
+      },
+      {
+        "id": "nps_respostas",
+        "nome": "Respostas de NPS",
+        "valor": 36,
+        "unidade": "int",
+        "melhor_quando": "maior",
+        "como": "contas com nota de NPS",
+        "detalhe": null
+      },
+      {
+        "id": "chamados_total",
+        "nome": "Chamados no período",
+        "valor": 58,
+        "unidade": "int",
+        "melhor_quando": "menor",
+        "como": "soma dos indicadores do bloco chamados",
+        "detalhe": null
+      },
+      {
+        "id": "grr",
+        "nome": "Retenção bruta (GRR)",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "maior",
+        "como": "receita mantida, sem contar expansão, sobre a receita anterior",
+        "detalhe": null
+      },
+      {
+        "id": "nrr",
+        "nome": "Retenção líquida (NRR)",
+        "valor": null,
+        "unidade": "pct",
+        "melhor_quando": "maior",
+        "como": "receita atual, com expansão, sobre a receita anterior",
+        "detalhe": null
+      }
+    ],
+    "cascata_receita": null,
+    "por_responsavel": [
+      {
+        "grupo": "CSM-01",
+        "contas": 27,
+        "receita": 34100.0,
+        "nota_media": 86.2,
+        "empacadas": 3,
+        "em_risco": 2,
+        "renovacoes": 1
+      },
+      {
+        "grupo": "CSM-02",
+        "contas": 13,
+        "receita": 60000.0,
+        "nota_media": 93.1,
+        "empacadas": 0,
+        "em_risco": 1,
+        "renovacoes": 1
+      }
+    ],
+    "por_segmento": [
+      {
+        "grupo": "SEG-01",
+        "contas": 35,
+        "receita": 34600.0,
+        "nota_media": 89.5,
+        "empacadas": 1,
+        "em_risco": 2,
+        "renovacoes": 0
+      },
+      {
+        "grupo": "SEG-02",
+        "contas": 4,
+        "receita": 11500.0,
+        "nota_media": 100.0,
+        "empacadas": 2,
+        "em_risco": 0,
+        "renovacoes": 1
+      },
+      {
+        "grupo": "SEG-03",
+        "contas": 1,
+        "receita": 48000.0,
+        "nota_media": 10.0,
+        "empacadas": 0,
+        "em_risco": 1,
+        "renovacoes": 1
+      }
+    ]
+  },
+  "metas": [
+    {
+      "meta": "85% das contas saudáveis",
+      "indicador": "pct_saudaveis",
+      "alvo": 85.0,
+      "atual": 84.2,
+      "unidade": "pct",
+      "melhor_quando": "maior",
+      "prazo": "dez/2026",
+      "responsavel": "Liderança",
+      "situacao": "atrás"
+    },
+    {
+      "meta": "No máximo 1 conta empacada",
+      "indicador": "contas_empacadas",
+      "alvo": 1.0,
+      "atual": 3,
+      "unidade": "int",
+      "melhor_quando": "menor",
+      "prazo": "dez/2026",
+      "responsavel": "Liderança",
+      "situacao": "atrás"
+    },
+    {
+      "meta": "Churn abaixo de 2% ao mês",
+      "indicador": "churn_contas_30d",
+      "alvo": 2.0,
+      "atual": null,
+      "unidade": "pct",
+      "melhor_quando": "menor",
+      "prazo": "dez/2026",
+      "responsavel": "Liderança",
+      "situacao": "sem dado"
+    },
+    {
+      "meta": "NPS 50",
+      "indicador": "nps",
+      "alvo": 50.0,
+      "atual": 67,
+      "unidade": "num",
+      "melhor_quando": "maior",
+      "prazo": "dez/2026",
+      "responsavel": "Liderança",
+      "situacao": "no alvo"
+    }
+  ],
+  "previsoes": {
+    "horizonte_dias": 90,
+    "topo_pct": 20,
+    "chance_para_tendencia_pct": 50,
+    "minimo_de_casos": 30,
+    "churn": {
+      "status": "sem_dados",
+      "motivo": "Há 0 contas canceladas com data. O mínimo para treinar é 30.",
+      "tem": 0,
+      "minimo": 30
+    },
+    "engajamento": {
+      "status": "sem_dados",
+      "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+      "rotinas": [
+        {
+          "id": "plano",
+          "rotina": "Acompanhamento do plano",
+          "janela_dias": 30,
+          "cai": {
+            "status": "sem_dados",
+            "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+            "tem": 0,
+            "minimo": 20,
+            "unidade": "contas"
+          },
+          "sobe": {
+            "status": "sem_dados",
+            "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+            "tem": 0,
+            "minimo": 20,
+            "unidade": "contas"
+          }
+        },
+        {
+          "id": "estoque",
+          "rotina": "Estoque",
+          "janela_dias": 30,
+          "cai": {
+            "status": "sem_dados",
+            "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+            "tem": 0,
+            "minimo": 20,
+            "unidade": "contas"
+          },
+          "sobe": {
+            "status": "sem_dados",
+            "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+            "tem": 0,
+            "minimo": 20,
+            "unidade": "contas"
+          }
+        },
+        {
+          "id": "agenda",
+          "rotina": "Agenda",
+          "janela_dias": 30,
+          "cai": {
+            "status": "sem_dados",
+            "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+            "tem": 0,
+            "minimo": 20,
+            "unidade": "contas"
+          },
+          "sobe": {
+            "status": "sem_dados",
+            "motivo": "Há 0 contas com histórico de uso. O mínimo para testar é 20.",
+            "tem": 0,
+            "minimo": 20,
+            "unidade": "contas"
+          }
+        }
+      ],
+      "contas": [],
+      "tem": 0,
+      "minimo": 20,
+      "unidade": "contas",
+      "contas_no_total": 0
+    },
+    "incremento": {
+      "status": "sem_dados",
+      "motivo": "O histórico de receita vem das rodadas, e a mais antiga é de 2026-11-03. Para treinar e testar, são pelo menos 180 dias de rodadas.",
+      "tem": 0,
+      "minimo": 30
+    }
+  },
+  "oportunidades": {
+    "total": 7,
+    "contas": 3,
+    "receita_das_contas": 49600.0,
+    "lista": [
+      {
+        "conta": "CONTA-028",
+        "oportunidade": "Estoque sem uso",
+        "tipo": "sem_uso",
+        "indicador": "estoque",
+        "detalhe": "Estoque: sem uso, e 33 de 36 contas usam",
+        "oferta": "",
+        "receita": 48000.0,
+        "nota": 10,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-034",
+        "oportunidade": "Acompanhamento do plano sem uso",
+        "tipo": "sem_uso",
+        "indicador": "plano",
+        "detalhe": "Acompanhamento do plano: sem uso, e 36 de 38 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-034",
+        "oportunidade": "Agenda sem uso",
+        "tipo": "sem_uso",
+        "indicador": "agenda",
+        "detalhe": "Agenda: sem uso, e 34 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-034",
+        "oportunidade": "Estoque sem uso",
+        "tipo": "sem_uso",
+        "indicador": "estoque",
+        "detalhe": "Estoque: sem uso, e 33 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-035",
+        "oportunidade": "Acompanhamento do plano sem uso",
+        "tipo": "sem_uso",
+        "indicador": "plano",
+        "detalhe": "Acompanhamento do plano: sem uso, e 36 de 38 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-035",
+        "oportunidade": "Agenda sem uso",
+        "tipo": "sem_uso",
+        "indicador": "agenda",
+        "detalhe": "Agenda: sem uso, e 34 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-035",
+        "oportunidade": "Estoque sem uso",
+        "tipo": "sem_uso",
+        "indicador": "estoque",
+        "detalhe": "Estoque: sem uso, e 33 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      }
+    ]
+  },
+  "melhoria": {
+    "o_que_mudou": [],
+    "temas_que_crescem": [],
+    "quem_saiu": {
+      "ultimos_30_dias": 0,
+      "30_dias_antes": 0,
+      "ultimos_90_dias": 0,
+      "90_dias_antes": 0,
+      "sem_motivo_especifico": 0,
+      "motivos": []
+    },
+    "primeiro_valor": [],
+    "grupos": {
+      "engajados": [
+        "CONTA-040",
+        "CONTA-001",
+        "CONTA-002",
+        "CONTA-003",
+        "CONTA-004",
+        "CONTA-005",
+        "CONTA-006",
+        "CONTA-007",
+        "CONTA-008",
+        "CONTA-009"
+      ],
+      "novos": [],
+      "ex_clientes": [],
+      "promotores": [
+        "CONTA-040",
+        "CONTA-029",
+        "CONTA-001",
+        "CONTA-002",
+        "CONTA-003",
+        "CONTA-004",
+        "CONTA-005",
+        "CONTA-006",
+        "CONTA-007",
+        "CONTA-008"
+      ],
+      "detratores": [
+        "CONTA-028",
+        "CONTA-034",
+        "CONTA-035"
+      ]
+    }
+  },
+  "falta_medir": [
+    {
+      "prioridade": "alta",
+      "o_que_falta": "O export não traz nenhuma conta cancelada",
+      "por_que_importa": "Quase sempre é export só de ativas. Sem as canceladas, não dá para saber o churn nem fazer o teste da conta perdida.",
+      "primeiro_passo": "Exporte também quem saiu, com a data de saída."
+    },
+    {
+      "prioridade": "alta",
+      "o_que_falta": "1 conta empacada sem motivo",
+      "por_que_importa": "Sem o motivo, ninguém sabe quem precisa agir.",
+      "primeiro_passo": "Registre o motivo no sistema de origem, para vir no próximo export. Para decidir já, anote na aba O que empaca."
+    },
+    {
+      "prioridade": "média",
+      "o_que_falta": "Meta 'Churn abaixo de 2% ao mês' sem dado",
+      "por_que_importa": "Não dá para saber se a meta está atrás.",
+      "primeiro_passo": "Traga o dado do indicador 'churn_contas_30d'."
+    },
+    {
+      "prioridade": "média",
+      "o_que_falta": "Próximo passo (só 2% das linhas têm)",
+      "por_que_importa": "Conta parada sem próximo passo continua parada.",
+      "primeiro_passo": "Complete no sistema de origem, para vir no próximo export."
+    },
+    {
+      "prioridade": "média",
+      "o_que_falta": "Data do próximo contato (só 2% das linhas têm)",
+      "por_que_importa": "Mostra quem ficou sem data combinada.",
+      "primeiro_passo": "Complete no sistema de origem, para vir no próximo export."
+    },
+    {
+      "prioridade": "média",
+      "o_que_falta": "2 contas sem nota por falta de dado",
+      "por_que_importa": "Conta sem nota não entra na comparação.",
+      "primeiro_passo": "Veja na aba Medições o que está vazio nessas contas."
+    },
+    {
+      "prioridade": "baixa",
+      "o_que_falta": "Tipo de contrato",
+      "por_que_importa": "No anual, a renovação é uma decisão com data. No mensal, a insatisfação acumula até cancelar, e o cuidado é outro.",
+      "primeiro_passo": "Inclua o tipo de contrato no export, ou anote 'contrato padrão' em 4-dados/como-medir.md."
+    },
+    {
+      "prioridade": "baixa",
+      "o_que_falta": "Receita do período anterior",
+      "por_que_importa": "Sem ela não dá para calcular retenção bruta e líquida.",
+      "primeiro_passo": "Exporte a receita de 12 meses atrás junto com a atual."
+    },
+    {
+      "prioridade": "baixa",
+      "o_que_falta": "Histórico para prever churn: 0 de 30 casos",
+      "por_que_importa": "Com pouco histórico, o modelo não treina e a previsão fica de fora.",
+      "primeiro_passo": "Exporte também quem saiu, com a data de saída, e as atividades com data dos meses passados."
+    },
+    {
+      "prioridade": "baixa",
+      "o_que_falta": "Histórico para prever o uso: 0 de 20 contas",
+      "por_que_importa": "Com pouco histórico, o modelo não treina e a previsão fica de fora.",
+      "primeiro_passo": "Exporte as atividades com data dos meses passados, ou guarde uma rodada por semana."
+    },
+    {
+      "prioridade": "baixa",
+      "o_que_falta": "Histórico para prever aumento de receita: 0 de 30 casos",
+      "por_que_importa": "Com pouco histórico, o modelo não treina e a previsão fica de fora.",
+      "primeiro_passo": "Rode toda semana, ou gere rodadas dos meses passados a partir de exports antigos, com --data e --entrada."
+    },
+    {
+      "prioridade": "baixa",
+      "o_que_falta": "O que configura oportunidade de upgrade nesta empresa",
+      "por_que_importa": "Sem isso, a rodada só aponta a rotina sem uso. Sobrecarga de usuário e limite de plano ficam de fora.",
+      "primeiro_passo": "Pergunte o que já virou upgrade aqui e anote na tabela Oportunidades de 4-dados/como-medir.md."
+    }
+  ],
+  "avisos_sobre_os_dados": []
+}

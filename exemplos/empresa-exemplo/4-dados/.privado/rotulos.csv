@@ -1,0 +1,10 @@
+﻿campo;rotulo;significa;contas
+etapa;Acompanhamento;Acompanhamento;37
+etapa;Implantação;Implantação;1
+etapa;Kickoff;Kickoff;1
+etapa;Treinamento;Treinamento;1
+indicador:pagamento;atrasado;0;6
+indicador:pagamento;em dia;100;32
+motivo_parada;Cliente;do cliente;1
+motivo_parada;Parado por nós;nosso;1
+status;Ativo;ativa;40

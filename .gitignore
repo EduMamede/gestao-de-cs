@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# A pasta de uma empresa real nunca entra aqui. O script recusa criar dentro do plugin,
+# e esta regra é a segunda proteção. Só o exemplo, com dados inventados, pode ficar.
+**/.gestao-de-cs.json
+!exemplos/empresa-exemplo/.gestao-de-cs.json
+minha-empresa/
+
+# Bases de teste são geradas por tests/gerar_bases.py
+tests/bases/
+*-workspace/

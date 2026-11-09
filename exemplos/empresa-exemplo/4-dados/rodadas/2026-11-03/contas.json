@@ -1,0 +1,3335 @@
+{
+  "CONTA-001": {
+    "conta": "CONTA-001",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-002": {
+    "conta": "CONTA-002",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-003": {
+    "conta": "CONTA-003",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-004": {
+    "conta": "CONTA-004",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-005": {
+    "conta": "CONTA-005",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-006": {
+    "conta": "CONTA-006",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-007": {
+    "conta": "CONTA-007",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-008": {
+    "conta": "CONTA-008",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-009": {
+    "conta": "CONTA-009",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-010": {
+    "conta": "CONTA-010",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-011": {
+    "conta": "CONTA-011",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-012": {
+    "conta": "CONTA-012",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-013": {
+    "conta": "CONTA-013",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-014": {
+    "conta": "CONTA-014",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-015": {
+    "conta": "CONTA-015",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-016": {
+    "conta": "CONTA-016",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-017": {
+    "conta": "CONTA-017",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-018": {
+    "conta": "CONTA-018",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-019": {
+    "conta": "CONTA-019",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-020": {
+    "conta": "CONTA-020",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-021": {
+    "conta": "CONTA-021",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-022": {
+    "conta": "CONTA-022",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-023": {
+    "conta": "CONTA-023",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-024": {
+    "conta": "CONTA-024",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-025": {
+    "conta": "CONTA-025",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 2000.0,
+    "pct_receita": 2.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Implantação",
+    "situacao": "empacado",
+    "dias_na_etapa": 45.0,
+    "prazo_da_etapa": 20.0,
+    "motivo_parada": "do cliente",
+    "quem_age": "cliente (CS cobra e ajuda)",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": "2026-11-08",
+    "tem_proximo_passo": true,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "empacado",
+        "texto": "Empacada há 45 dias em Implantação (prazo 20), motivo do cliente"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-026": {
+    "conta": "CONTA-026",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1500.0,
+    "pct_receita": 1.6,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Treinamento",
+    "situacao": "empacado",
+    "dias_na_etapa": 30.0,
+    "prazo_da_etapa": 15.0,
+    "motivo_parada": "nosso",
+    "quem_age": "nós (destravar internamente)",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "empacado",
+        "texto": "Empacada há 30 dias em Treinamento (prazo 15), motivo nosso"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-027": {
+    "conta": "CONTA-027",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Kickoff",
+    "situacao": "empacado",
+    "dias_na_etapa": 10.0,
+    "prazo_da_etapa": 7.0,
+    "motivo_parada": null,
+    "quem_age": "a definir (falta o motivo)",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "empacado",
+        "texto": "Empacada há 10 dias em Kickoff (prazo 7), motivo não informado"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-028": {
+    "conta": "CONTA-028",
+    "nota": 10,
+    "faixa": "possivel_churn",
+    "confianca": "alta",
+    "receita": 48000.0,
+    "pct_receita": 51.0,
+    "contrato": null,
+    "renovacao": "2026-12-18",
+    "dias_ate_renovar": 45,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-02",
+    "dias_sem_contato": 90,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "nota_vermelha",
+        "texto": "Nota 10 (possível churn)"
+      },
+      {
+        "codigo": "financeiro",
+        "texto": "Financeiro com problema: Pagamento com nota 0"
+      },
+      {
+        "codigo": "sem_contato",
+        "texto": "Sem contato há 90 dias"
+      },
+      {
+        "codigo": "renovacao_com_risco",
+        "texto": "Renova em 45 dias"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 2.0,
+        "antes": 2.0,
+        "subnota": 25.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 5.0,
+        "antes": 5.0,
+        "subnota": 25.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 0.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 9.0,
+        "antes": 9.0,
+        "subnota": 0.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": [
+      {
+        "conta": "CONTA-028",
+        "oportunidade": "Estoque sem uso",
+        "tipo": "sem_uso",
+        "indicador": "estoque",
+        "detalhe": "Estoque: sem uso, e 33 de 36 contas usam",
+        "oferta": "",
+        "receita": 48000.0,
+        "nota": 10,
+        "com_insatisfacao": true
+      }
+    ]
+  },
+  "CONTA-029": {
+    "conta": "CONTA-029",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 3000.0,
+    "pct_receita": 3.2,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "padrao_ruim",
+        "texto": "Acompanhamento do plano caiu 70% (de 40 para 12), com nota boa"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 12.0,
+        "antes": 40.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-030": {
+    "conta": "CONTA-030",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [
+      {
+        "rotina": "Acompanhamento do plano",
+        "antes": 10.0,
+        "agora": 25.0
+      }
+    ],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 25.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-031": {
+    "conta": "CONTA-031",
+    "nota": 46,
+    "faixa": "pode_melhorar",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "nota_amarela",
+        "texto": "Nota 46 (pode melhorar)"
+      },
+      {
+        "codigo": "financeiro",
+        "texto": "Financeiro com problema: Pagamento com nota 0"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 4.0,
+        "antes": 4.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 2.0,
+        "antes": 2.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 0.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-032": {
+    "conta": "CONTA-032",
+    "nota": 46,
+    "faixa": "pode_melhorar",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "nota_amarela",
+        "texto": "Nota 46 (pode melhorar)"
+      },
+      {
+        "codigo": "financeiro",
+        "texto": "Financeiro com problema: Pagamento com nota 0"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 4.0,
+        "antes": 4.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 2.0,
+        "antes": 2.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 0.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-033": {
+    "conta": "CONTA-033",
+    "nota": 46,
+    "faixa": "pode_melhorar",
+    "confianca": "alta",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "nota_amarela",
+        "texto": "Nota 46 (pode melhorar)"
+      },
+      {
+        "codigo": "financeiro",
+        "texto": "Financeiro com problema: Pagamento com nota 0"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 4.0,
+        "antes": 4.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 2.0,
+        "antes": 2.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 50.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 0.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-034": {
+    "conta": "CONTA-034",
+    "nota": 8,
+    "faixa": "possivel_churn",
+    "confianca": "alta",
+    "receita": 800.0,
+    "pct_receita": 0.9,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "nota_vermelha",
+        "texto": "Nota 8 (possível churn)"
+      },
+      {
+        "codigo": "financeiro",
+        "texto": "Financeiro com problema: Pagamento com nota 0"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 0.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 50.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": [
+      {
+        "conta": "CONTA-034",
+        "oportunidade": "Acompanhamento do plano sem uso",
+        "tipo": "sem_uso",
+        "indicador": "plano",
+        "detalhe": "Acompanhamento do plano: sem uso, e 36 de 38 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-034",
+        "oportunidade": "Agenda sem uso",
+        "tipo": "sem_uso",
+        "indicador": "agenda",
+        "detalhe": "Agenda: sem uso, e 34 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-034",
+        "oportunidade": "Estoque sem uso",
+        "tipo": "sem_uso",
+        "indicador": "estoque",
+        "detalhe": "Estoque: sem uso, e 33 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      }
+    ]
+  },
+  "CONTA-035": {
+    "conta": "CONTA-035",
+    "nota": 8,
+    "faixa": "possivel_churn",
+    "confianca": "alta",
+    "receita": 800.0,
+    "pct_receita": 0.9,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "nota_vermelha",
+        "texto": "Nota 8 (possível churn)"
+      },
+      {
+        "codigo": "financeiro",
+        "texto": "Financeiro com problema: Pagamento com nota 0"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 0.0,
+        "antes": 0.0,
+        "subnota": 0.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 0.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 50.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": [
+      {
+        "conta": "CONTA-035",
+        "oportunidade": "Acompanhamento do plano sem uso",
+        "tipo": "sem_uso",
+        "indicador": "plano",
+        "detalhe": "Acompanhamento do plano: sem uso, e 36 de 38 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-035",
+        "oportunidade": "Agenda sem uso",
+        "tipo": "sem_uso",
+        "indicador": "agenda",
+        "detalhe": "Agenda: sem uso, e 34 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      },
+      {
+        "conta": "CONTA-035",
+        "oportunidade": "Estoque sem uso",
+        "tipo": "sem_uso",
+        "indicador": "estoque",
+        "detalhe": "Estoque: sem uso, e 33 de 36 contas usam",
+        "oferta": "",
+        "receita": 800.0,
+        "nota": 8,
+        "com_insatisfacao": true
+      }
+    ]
+  },
+  "CONTA-036": {
+    "conta": "CONTA-036",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "média",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-037": {
+    "conta": "CONTA-037",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "média",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-038": {
+    "conta": "CONTA-038",
+    "nota": null,
+    "faixa": "sem_nota",
+    "confianca": "baixa",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-039": {
+    "conta": "CONTA-039",
+    "nota": null,
+    "faixa": "sem_nota",
+    "confianca": "baixa",
+    "receita": 1000.0,
+    "pct_receita": 1.1,
+    "contrato": null,
+    "renovacao": "2027-08-30",
+    "dias_ate_renovar": 300,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": null
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  },
+  "CONTA-040": {
+    "conta": "CONTA-040",
+    "nota": 100,
+    "faixa": "saudavel",
+    "confianca": "alta",
+    "receita": 5000.0,
+    "pct_receita": 5.3,
+    "contrato": null,
+    "renovacao": "2027-01-02",
+    "dias_ate_renovar": 60,
+    "etapa": "Acompanhamento",
+    "situacao": "sem prazo",
+    "dias_na_etapa": 200.0,
+    "prazo_da_etapa": null,
+    "motivo_parada": null,
+    "quem_age": "CS",
+    "responsavel": "CSM-01",
+    "dias_sem_contato": 10,
+    "proximo_contato": null,
+    "tem_proximo_passo": false,
+    "contatos_anotados": {
+      "patrocinador": true,
+      "decisor": false,
+      "usuario_chave": false
+    },
+    "sinais": [
+      {
+        "codigo": "renovacao_sozinha",
+        "texto": "Renova em 60 dias"
+      }
+    ],
+    "sinais_bons": [],
+    "rotinas": [
+      {
+        "id": "plano",
+        "rotina": "Acompanhamento do plano",
+        "bloco": "rotina",
+        "esperado": 8.0,
+        "agora": 10.0,
+        "antes": 10.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "estoque",
+        "rotina": "Estoque",
+        "bloco": "rotina",
+        "esperado": 4.0,
+        "agora": 6.0,
+        "antes": 6.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "agenda",
+        "rotina": "Agenda",
+        "bloco": "rotina",
+        "esperado": 20.0,
+        "agora": 25.0,
+        "antes": 25.0,
+        "subnota": 100.0
+      },
+      {
+        "id": "pagamento",
+        "rotina": "Pagamento",
+        "bloco": "financeiro",
+        "esperado": null,
+        "agora": null,
+        "antes": null,
+        "subnota": 100.0
+      },
+      {
+        "id": "chamados",
+        "rotina": "Chamados",
+        "bloco": "chamados",
+        "esperado": 3.0,
+        "agora": 1.0,
+        "antes": 1.0,
+        "subnota": 100.0
+      }
+    ],
+    "chance_churn_pct": null,
+    "chance_aumento_pct": null,
+    "tendencias_de_uso": [],
+    "oportunidades": []
+  }
+}

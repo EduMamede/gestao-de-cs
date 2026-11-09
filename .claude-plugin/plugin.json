@@ -1,0 +1,17 @@
+{
+  "name": "gestao-de-cs",
+  "displayName": "Gestão de CS",
+  "description": "Ajuda uma empresa a gerenciar o Customer Success a partir de um checklist e de exports de dados: health score, conta parada, mudança de padrão, painel geral e a semana do time.",
+  "version": "0.9.0",
+  "author": {
+    "name": "Eduardo Mamede"
+  },
+  "keywords": [
+    "customer-success",
+    "cs",
+    "health-score",
+    "churn",
+    "renovacao",
+    "pt-br"
+  ]
+}

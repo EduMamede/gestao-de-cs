@@ -1,0 +1,12 @@
+{
+  "name": "gestao-de-cs",
+  "description": "Plugin de Customer Success guiado por dados, em português do Brasil.",
+  "owner": { "name": "Eduardo Mamede" },
+  "plugins": [
+    {
+      "name": "gestao-de-cs",
+      "source": "./",
+      "description": "Checklist, health score, conta parada, painel geral e a semana do time de CS."
+    }
+  ]
+}

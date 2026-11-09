@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Bash|PowerShell|Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/guarda_privacidade.py\" || python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/guarda_privacidade.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

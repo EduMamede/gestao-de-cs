@@ -1,0 +1,20 @@
+{
+  "nome": "Eduardo Mamede",
+  "fonte": "Segoe UI",
+  "fundo_cabecalho": "#151515",
+  "texto_cabecalho": "#FFFFFF",
+  "subtitulo": "#2B2B2B",
+  "destaque": "#D7FF00",
+  "detalhe": "#FF4FD8",
+  "texto_suave": "#767676",
+  "borda": "#CFCFCF",
+  "campo_editavel": "#F7FFD1",
+  "verde_fundo": "#D9F2E3",
+  "verde_texto": "#14613A",
+  "amarelo_fundo": "#FFF1CC",
+  "amarelo_texto": "#7A5600",
+  "vermelho_fundo": "#F9D9DB",
+  "vermelho_texto": "#8A1C25",
+  "cinza_fundo": "#EDEDED",
+  "cinza_texto": "#4A4A4A"
+}
