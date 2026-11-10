@@ -1,7 +1,7 @@
 """A rotina que roda sozinha: lê o export novo, atualiza a nota, monta a semana, reavalia o urgente e refaz a página.
 
 Só script, sem IA: não gasta limite do Claude e nenhum dado sai do computador. O que precisa de conversa, como a
-leitura do líder e os rascunhos, fica para quando a pessoa abrir /gestao-de-cs:hoje.
+leitura do líder e os rascunhos, fica para quando a pessoa abrir /gestao-de-cs:central.
 
 O export continua vindo da pessoa ou do sistema dela: a skill não conecta em banco. Ele chega em
 4-dados/entradas/novos, que a trava de privacidade já cobre.
@@ -26,7 +26,7 @@ from xml.sax.saxutils import escape
 
 from . import ErroDeUso, config as config_mod, plural
 from .ciclo import para_a_semana
-from .hoje import ARQUIVO as PAGINA, gerar_hoje, preparar
+from .hoje import ARQUIVO as PAGINA, DIAS_DA_SEMANA, gerar_hoje, preparar
 from .medir import rodar
 from .pasta import NOVOS, modo_privacidade
 from .privacidade import Cofre
@@ -167,7 +167,7 @@ def executar(pasta: Path, hoje: dt.date, nome_de) -> dict:
     except ErroDeUso:  # ainda não há rodada
         saida["sem_rodada"] = True
         texto = "\n".join(
-            [f"# Hoje, {hoje.strftime('%d/%m/%Y')}", "", *[f"> {t}" for t in topo], "", "Ainda não há rodada, então não dá para dizer como as contas estão.", "", "Deixe o export em `4-dados/entradas/novos` ou rode `/gestao-de-cs:analista`.", ""]
+            [f"# {DIAS_DA_SEMANA[hoje.weekday()]}, {hoje.strftime('%d/%m/%Y')}", "", *[f"> {t}" for t in topo], "", "Ainda não há rodada, então não dá para dizer como as contas estão.", "", "Deixe o export em `4-dados/entradas/novos` ou rode `/gestao-de-cs:analista`.", ""]
         )
         (pasta / PAGINA).write_text(texto, encoding="utf-8")
     _copia_com_nomes(pasta, PAGINA, texto)
@@ -193,7 +193,7 @@ def texto_da_rotina(s: dict, hoje: dt.date) -> str:
         linhas.append("Sem export novo: o health score não mudou.")
     linhas += [f"Aviso sobre os dados: {a}" for a in s["avisos_da_rodada"][:5]]
     if s["semana"]:
-        linhas.append(f"Semana criada em {s['semana']}. A leitura do líder fica em branco até a pessoa abrir /gestao-de-cs:hoje.")
+        linhas.append(f"Semana criada em {s['semana']}. A leitura do líder fica em branco até a pessoa abrir /gestao-de-cs:central.")
     if s["preparados"]:
         linhas.append(f"Preparados: {plural(len(s['preparados']), 'arquivo', 'arquivos')}, só com os fatos da rodada.")
     linhas.append(f"Urgentes novos na fila: {len(s['urgentes']['entraram'])}.")

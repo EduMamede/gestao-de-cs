@@ -13,15 +13,16 @@ Conversa com cliente sem dado é opinião. E o maior erro que vejo em CS é o ti
 | **Consultor de CS** | `/gestao-de-cs:consultor` | conduz o checklist, sugere e cria a pasta da empresa, registra o que foi conversado |
 | **Analista de dados** | `/gestao-de-cs:analista` | liga as colunas, mede as rotinas, gera a planilha de health score, o painel geral e as previsões |
 | **Líder da rotina** | `/gestao-de-cs:semana` | monta a semana: o mais crucial, o que está atrás, quem precisa agir |
-| **Contas e receita** | `/gestao-de-cs:contas` | contas-chave, renovação por tipo de contrato, pedido de desconto, oportunidades de upgrade, reunião em 4 passos e apresentação em PowerPoint, com gráficos de evolução em barras e espaço para prints |
+| **Contas e receita** | `/gestao-de-cs:contas` | o resumo de uma página da conta antes de qualquer conversa, contas-chave, renovação por tipo de contrato, pedido de desconto, oportunidades de upgrade, reunião em 4 passos e apresentação em PowerPoint, com gráficos de evolução em barras e espaço para prints |
 | **Guardião da carteira** | `/gestao-de-cs:guardiao` | onboarding, o que empaca, troca de contato e plano para conta em risco |
 | **Melhoria contínua** | `/gestao-de-cs:melhoria` | o que cresce e por quê, quem saiu, pesquisa, NPS e entrevistas. Propõe, e você aprova |
 
-Os agentes preparam, e **você decide em um lugar só**, com `/gestao-de-cs:hoje`:
+Os agentes preparam, e **você decide em um lugar só**.
 
-- **O comando único.** Roda o que falta (rodada, semana, planos e reuniões) e para em cada aprovação.
+- **A central (`/gestao-de-cs:central`).** Uma conversa só para o dia inteiro. Roda o que falta, reconhece o dia da semana (na segunda, a semana; de terça a quinta, o foco do dia; na sexta, o balanço), junta o que ficou pendente e depois encaminha cada pedido para o agente certo, sem você lembrar comando.
+- **A mesa (`/gestao-de-cs:hoje`).** Onde você decide o que foi preparado, marca tarefas e leva o que fazer para a agenda. A central chama a mesa quando precisa.
 - **A mesa de aprovação (`mesa.md`).** Plano, reunião e sugestão entram sozinhos e esperam a sua decisão. Nada é enviado por você.
-- **A página do dia (`hoje.md`).** O que melhorou, o que fazer hoje, o que está marcado e o que espera você. Sai só dos seus arquivos, sem IA.
+- **A página do dia (`hoje.md`).** O que melhorou, o que fazer hoje, o que está marcado e o que espera você, com o que está parado na mesa há mais de 3 dias. Muda com o dia: a segunda abre com a semana e a sexta fecha com o balanço. Sai só dos seus arquivos, sem IA.
 - **A lista de tarefas (`tarefas.md`).** O que fazer, até quando e quem faz. Sai da semana, dos planos aprovados e das reuniões, e você acrescenta as suas.
 - **A agenda.** Com o Google Agenda conectado no Claude, a IA vê os horários livres, propõe os blocos e cria só o que você aprovar. Sem conexão, o arquivo `com-nomes/agenda.ics` entra em qualquer calendário, em eventos de dia inteiro.
 - **O ciclo de resultado.** Compara a rodada de antes da decisão com a de depois e leva o que não melhorou para a semana. Mostra que o número mudou depois da ação, não que a ação causou a mudança. Com 5 casos ou mais de cada lado, mostra também as contas da mesma faixa que não tiveram a ação.
@@ -93,7 +94,7 @@ No Mac e no Linux, se `python` não existir, crie um atalho para `python3`.
 4. Rode `/gestao-de-cs:semana` para montar a semana.
 5. Na semana seguinte, um export novo e `/gestao-de-cs:analista` de novo. A cada rodada, a comparação fica melhor.
 6. Quando precisar: `/gestao-de-cs:contas` para reunião, renovação e oportunidades; `/gestao-de-cs:guardiao` para onboarding e conta em risco; `/gestao-de-cs:melhoria` para entender o que cresce e ouvir os clientes.
-7. Com a rotina rodando, comece o dia por `/gestao-de-cs:hoje`.
+7. No dia a dia, comece por `/gestao-de-cs:central` e peça o resto na mesma conversa.
 
 Quer ver como fica antes de usar? A pasta `exemplos/empresa-exemplo/` tem uma rodada pronta, com dados inventados.
 

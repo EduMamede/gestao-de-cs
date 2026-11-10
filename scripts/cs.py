@@ -638,6 +638,20 @@ def cmd_preparar(args) -> int:
     return 0
 
 
+def cmd_resumo(args) -> int:
+    from cslib.resumo import gravar_resumo
+
+    pasta = pasta_mod.exigir_pasta(args.pasta)
+    data = _data(args.data)
+    caminho, texto = gravar_resumo(pasta, _nome_simples(args.conta), data, _nomeador(pasta))
+    print(texto)
+    if pasta_mod.modo_privacidade(pasta) == "protegido":
+        print(f"A pessoa abre com-nomes/resumo-{args.conta}-{data.isoformat()}.md, com os nomes reais.")
+    else:
+        print(f"O resumo está em {caminho.relative_to(pasta).as_posix()}.")
+    return 0
+
+
 def cmd_nova_ficha(args) -> int:
     pasta = pasta_mod.exigir_pasta(args.pasta)
     ficha = pasta_mod.nova_ficha(pasta, _nome_simples(args.conta))
@@ -781,6 +795,12 @@ def montar_parser() -> argparse.ArgumentParser:
     p.add_argument("--data")
     p.add_argument("--limite", type=int, default=3)
     p.set_defaults(func=cmd_preparar)
+
+    p = sub.add_parser("resumo", help="uma página com os últimos 90 dias da conta, para ler antes de uma conversa")
+    p.add_argument("--pasta", required=True)
+    p.add_argument("--conta", required=True)
+    p.add_argument("--data")
+    p.set_defaults(func=cmd_resumo)
 
     p = sub.add_parser("tarefas", help="a lista do que fazer e o arquivo para a agenda")
     p.add_argument("--pasta", required=True)

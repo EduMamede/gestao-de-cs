@@ -17,8 +17,9 @@ from .contas import NOME_TIPO, TIPOS as TIPOS_DE_REUNIAO, carregar_fatos, criar_
 from .guardiao import criar_plano
 from .medir import rodadas_anteriores
 from .mesa import avisar, decidir, em_aberto, eh_aviso, ler_data, linha_em_aberto, por_na_fila, sincronizar
-from .relatorios import moeda, numero
-from .semana import _agenda, segunda_da_semana
+from .relatorios import moeda, numero, valor_formatado
+from .resumo import resumos_das_reunioes
+from .semana import MARCA_LEITURA, _agenda, segunda_da_semana
 
 ARQUIVO = "hoje.md"
 MAX_POR_BLOCO = 5
@@ -69,7 +70,8 @@ def _reunioes(pasta: Path, hoje: dt.date, nome_de) -> list:
         achado = re.fullmatch(r"(\d{4}-\d{2}-\d{2})-(\w+)\.md", caminho.name)
         data = ler_data(achado.group(1)) if achado else None
         if data and achado.group(2) in TIPOS_DE_REUNIAO and 0 < (data - hoje).days <= DIAS_A_FRENTE:  # a de hoje está em "Para fazer"
-            saida.append((data, f"Reunião de {NOME_TIPO[achado.group(2)]}: {nome_de(caminho.parent.parent.name)}"))
+            pronto = " (resumo pronto)" if (caminho.parent.parent / f"resumo-{hoje.isoformat()}.md").exists() else ""
+            saida.append((data, f"Reunião de {NOME_TIPO[achado.group(2)]}: {nome_de(caminho.parent.parent.name)}{pronto}"))
     return saida
 
 
@@ -111,16 +113,81 @@ def _para_fazer(hoje: dt.date, resumo: dict, tarefas: list, nome_de) -> list:
     return ["- Nada para hoje."]
 
 
+DIAS_DA_SEMANA = ("Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo")
+PARADO_NA_MESA = 3  # item há mais dias que isso na mesa ganha a marca de parado
+
+
+def _segunda_desta_semana(hoje: dt.date) -> dt.date:
+    """A semana em curso. Diferente de segunda_da_semana, que na sexta já olha a próxima para planejar."""
+    return hoje - dt.timedelta(days=hoje.weekday())
+
+
+def _tarefas_da_semana(tarefas: list, segunda: dt.date) -> list:
+    return [t for t in tarefas if t["de_onde"].startswith(f"semana-{segunda.isoformat()}")]
+
+
+def _bloco_da_segunda(resumo: dict, tarefas: list, hoje: dt.date) -> list:
+    """Na segunda, a semana: o mais crucial, as metas atrás e o que sobrou da semana passada."""
+    linhas = ["## A semana", ""]
+    crucial = [p for p in resumo["prioridades"] if p["pontos"] >= 1][:3]
+    linhas += [f"- O mais crucial: {rotulo(p)}. {p['por_que'][0]}. Quem age: {p['quem_age']}." for p in crucial]
+    atras = [m for m in resumo["metas"] if m["situacao"] == "atrás"][:2]
+    linhas += [f"- Meta atrás: {m['meta']} (atual {valor_formatado(m['atual'], m['unidade'])}, alvo {valor_formatado(m['alvo'], m['unidade'])})." for m in atras]
+    if not crucial and not atras:
+        dados = resumo["dados_disponiveis"]
+        linhas += ["- Nenhuma conta com sinal e nenhuma meta atrás nesta rodada." if dados["nota"] or dados["etapa"] else "- Ainda não dá para priorizar: falta nota ou etapa nas contas."]
+    passada = _tarefas_da_semana(tarefas, _segunda_desta_semana(hoje) - dt.timedelta(days=7))
+    sobrou = [t for t in passada if not t["feita_em"]]
+    if sobrou:
+        quantas = "ficou 1 tarefa aberta" if len(sobrou) == 1 else f"ficaram {len(sobrou)} tarefas abertas"
+        linhas += [f"- Da semana passada {quantas}: estão em Para fazer."]
+    return linhas + [""]
+
+
+def _bloco_da_sexta(resumo: dict, tarefas: list, itens: list, grupos: dict, hoje: dt.date) -> list:
+    """Na sexta, o balanço: o que foi feito, o que ficou, o que melhorou depois das ações e o dado para trazer."""
+    segunda = _segunda_desta_semana(hoje)
+    linhas = ["## Como foi a semana", ""]
+    da_semana = _tarefas_da_semana(tarefas, segunda)
+    if da_semana:
+        feitas = sum(1 for t in da_semana if t["feita_em"])
+        linhas += [f"- Tarefas da semana: {feitas} de {len(da_semana)} feitas."]
+    decididos = [i for i in itens if i["decisao"] and (ler_data(i["decidido_em"]) or dt.date.min) >= segunda]
+    linhas += [f"- Mesa: {plural(len(decididos), 'decisão', 'decisões')} nesta semana e {len(em_aberto(itens))} em aberto."]
+    if grupos["melhorou"] or grupos["rever"]:
+        linhas += [f"- Depois das ações: {len(grupos['melhorou'])} melhoraram e {len(grupos['rever'])} pedem revisão."]
+    metas = resumo["metas"]
+    if metas:
+        linhas += [f"- Metas: {sum(1 for m in metas if m['situacao'] == 'no alvo')} no alvo e {sum(1 for m in metas if m['situacao'] == 'atrás')} atrás."]
+    if resumo["falta_medir"]:
+        linhas += [f"- Para trazer na próxima semana: {resumo['falta_medir'][0]['o_que_falta']}."]
+    return linhas + [""]
+
+
+def _leitura_em_branco(pasta: Path, hoje: dt.date) -> bool:
+    caminho = pasta / "2-metas" / f"semana-{_segunda_desta_semana(hoje).isoformat()}.md"
+    return caminho.exists() and MARCA_LEITURA in caminho.read_text(encoding="utf-8")
+
+
 def texto_hoje(pasta: Path, hoje: dt.date, data_rodada: dt.date, resumo: dict, fatos: dict, itens: list, ciclo: dict, nome_de, topo: list | None = None, tarefas: list | None = None) -> str:
     tarefas = tarefas or []
     grupos = ciclo_mod.separar(ciclo)
-    linhas = [f"# Hoje, {hoje.strftime('%d/%m/%Y')}", "", f"Dados da rodada de {data_rodada.strftime('%d/%m/%Y')}."]
+    linhas = [f"# {DIAS_DA_SEMANA[hoje.weekday()]}, {hoje.strftime('%d/%m/%Y')}", "", f"Dados da rodada de {data_rodada.strftime('%d/%m/%Y')}."]
     idade = (hoje - data_rodada).days
     if idade > RODADA_ANTIGA:
         linhas += [f"Esta rodada tem {plural(idade, 'dia', 'dias')}: vale trazer um export novo."]
     linhas += [f"> {aviso}" for aviso in topo or []]
+    linhas += [""]
 
-    linhas += ["", "## O que melhorou", ""]
+    # A página muda com o dia: segunda abre a semana, sexta fecha, e o fim de semana não tem agenda.
+    if hoje.weekday() == 0:
+        linhas += _bloco_da_segunda(resumo, tarefas, hoje)
+    elif hoje.weekday() == 4:
+        linhas += _bloco_da_sexta(resumo, tarefas, itens, grupos, hoje)
+    elif hoje.weekday() >= 5:
+        linhas += ["## Fim de semana", "", "- Nada agendado. Na segunda, a semana se monta sozinha.", ""]
+
+    linhas += ["## O que melhorou", ""]
     melhorou = [f"- {ciclo_mod.frase(r, nome_de)}." for r in grupos["melhorou"]]
     cedo = [f"- Ainda é cedo. {ciclo_mod.frase(r, nome_de)}." for r in grupos["cedo"]]
     # Sinal bom pode ser número caindo, como chamados. Por isso a frase mostra de quanto para quanto.
@@ -144,7 +211,14 @@ def texto_hoje(pasta: Path, hoje: dt.date, data_rodada: dt.date, resumo: dict, f
     abertos = em_aberto(itens)
     rever = [f"- Rever: {ciclo_mod.frase(r, nome_de)}." for r in grupos["rever"]]
     saiu = [f"- Entender por quê: {ciclo_mod.frase(r, nome_de)}." for r in grupos["saiu"]]
-    pendentes = [f"- {linha_em_aberto(pasta, i, nome_de)}." for i in abertos] + rever + saiu
+    def parado(item) -> str:
+        chegou = ler_data(item["chegou_em"])
+        dias = (hoje - chegou).days if chegou else 0
+        return f" Está na mesa há {dias} dias." if dias > PARADO_NA_MESA else ""
+
+    pendentes = [f"- {linha_em_aberto(pasta, i, nome_de)}.{parado(i)}" for i in abertos] + rever + saiu
+    if _leitura_em_branco(pasta, hoje):
+        pendentes.append("- A leitura da semana ainda está em branco.")
     linhas += pendentes[:MAX_POR_BLOCO] or ["- Nada espera a sua decisão."]
     if len(pendentes) > MAX_POR_BLOCO:
         linhas += [f"- Mais {len(pendentes) - MAX_POR_BLOCO}: veja mesa.md."]
@@ -263,6 +337,7 @@ def gerar_hoje(pasta: Path, hoje: dt.date, nome_de, topo: list | None = None) ->
     itens, novos, avisos = sincronizar(pasta, hoje)
     tarefas = atualizar_tarefas(pasta, hoje, resumo, itens)
     ciclo = ciclo_mod.calcular(pasta, itens, hoje)
+    resumos_das_reunioes(pasta, hoje, nome_de)  # quem tem reunião hoje ou amanhã já encontra o resumo da conta pronto
     topo = list(topo or [])
     if urgentes["ficaram"]:
         topo.append(f"Mais {plural(urgentes['ficaram'], 'urgente ficou', 'urgentes ficaram')} de fora por hoje, para a fila não lotar. Entram na próxima vez.")

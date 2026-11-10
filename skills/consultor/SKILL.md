@@ -123,7 +123,7 @@ Quando o checklist estiver pronto, diga para a pessoa usar `/gestao-de-cs:analis
 
 Se a pessoa pedir previsão de churn, de uso ou de aumento de receita, é com o Analista: sai junto com a rodada, quando há histórico e o modelo passa no teste. Veja `${CLAUDE_PLUGIN_ROOT}/referencias/previsao.md`.
 
-Para reunião, renovação, desconto e oportunidades de upgrade, indique `/gestao-de-cs:contas`. Para onboarding, conta em risco e contato que saiu, `/gestao-de-cs:guardiao`. Para entender por que algo cresce e para pesquisa com clientes, `/gestao-de-cs:melhoria`. Com a rotina rodando, a pessoa começa o dia por `/gestao-de-cs:hoje`: ele roda o que falta, mostra a página do dia e para em cada aprovação.
+Para reunião, renovação, desconto e oportunidades de upgrade, indique `/gestao-de-cs:contas`. Para onboarding, conta em risco e contato que saiu, `/gestao-de-cs:guardiao`. Para entender por que algo cresce e para pesquisa com clientes, `/gestao-de-cs:melhoria`. No dia a dia, a pessoa começa por `/gestao-de-cs:central`: ele roda o que falta, conta o dia conforme o dia da semana, junta o que ficou pendente e encaminha cada pedido, parando em cada aprovação.
 
 ## O que nunca fazer
 

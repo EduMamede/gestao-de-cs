@@ -1,6 +1,6 @@
 ---
 name: hoje
-description: A mesa do dia, o comando único do CS. Roda em sequência o que está pendente (export novo, health score, semana, planos e reuniões, o que ficou urgente), mostra a página do dia com o que melhorou, as tarefas, o que está marcado e o que espera a pessoa, e para em cada aprovação. Cuida da lista de tarefas, leva o que fazer para a agenda (Google Agenda conectado ou arquivo para qualquer calendário) e deixa a rotina rodando sozinha no computador. Use sempre que a pessoa perguntar o que tem para hoje em CS, pedir o resumo do dia ou a lista de tarefas, quiser organizar a agenda, ver ou decidir o que está esperando aprovação, perguntar se uma ação deu resultado, pedir para rodar tudo ou quiser automatizar a rotina semanal e o health score, mesmo sem citar a palavra "mesa".
+description: A mesa de aprovação do CS. Roda a rotina, mostra a página do dia e para em cada decisão da mesa; cuida da lista de tarefas, leva o que fazer para a agenda (Google Agenda conectado ou arquivo para qualquer calendário), mostra se uma ação deu resultado e deixa a rotina rodando sozinha no computador. Use quando a pessoa quiser decidir o que está esperando aprovação, marcar tarefa feita, organizar a agenda, ver o resultado das ações ou automatizar a rotina semanal e o health score, mesmo sem citar a palavra "mesa". Para abrir o dia ou a semana e conversar sobre tudo num lugar só, use a skill central.
 allowed-tools:
   - Bash(python "${CLAUDE_PLUGIN_ROOT}/scripts/cs.py" *)
   - PowerShell(python "${CLAUDE_PLUGIN_ROOT}/scripts/cs.py" *)
@@ -41,7 +41,8 @@ Isso faz, em sequência e sem IA:
 2. Atualiza o health score, se houver export novo. Sem export, os números continuam os da última rodada, e a página diz a data.
 3. Na primeira vez da semana, de segunda a quinta, monta a semana e prepara planos e reuniões, até 3 por vez.
 4. Coloca na fila o que ficou urgente.
-5. Grava a página do dia em `hoje.md`. No modo protegido, a pessoa abre `com-nomes/hoje.md`, com os nomes reais.
+5. Deixa pronto o resumo da conta de quem tem reunião hoje ou amanhã.
+6. Grava a página do dia em `hoje.md`. No modo protegido, a pessoa abre `com-nomes/hoje.md`, com os nomes reais.
 
 Rodar de novo no mesmo dia não duplica nada. Se o export não rodar, a página avisa. Não tente consertar: peça para rodar `/gestao-de-cs:analista`.
 

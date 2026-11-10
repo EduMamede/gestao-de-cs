@@ -17,6 +17,7 @@ from test_mesa import NOME, ajustar, dias, itens_da_mesa
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import guarda_privacidade  # noqa: E402
 from cslib import rotina as rotina_mod  # noqa: E402
+from cslib.semana import MARCA_LEITURA  # noqa: E402
 
 # 2026-11-03 é terça. A segunda daquela semana é 2026-11-02.
 SEGUNDA = "2026-11-02"
@@ -52,7 +53,7 @@ class TestRotina(unittest.TestCase):
         self.assertIn("o health score foi atualizado", saida)
         self.assertIn(f"Semana criada em 2-metas/semana-{SEGUNDA}.md", saida)
         self.assertIn("Preparados: 3 arquivos", saida)
-        self.assertIn("# Hoje, 03/11/2026", saida)
+        self.assertIn("# Terça, 03/11/2026", saida)
         self.assertTrue((self.e.pasta / "4-dados" / "rodadas" / REF / "health-score.xlsx").exists())
         self.assertTrue((self.e.pasta / "2-metas" / f"semana-{SEGUNDA}.md").exists())
         self.assertTrue((self.e.pasta / "hoje.md").exists())
@@ -177,6 +178,77 @@ class TestRotina(unittest.TestCase):
         self.assertEqual(codigo, 0, saida)
         self.assertIn("Esperando em entradas/novos: 1 arquivo", saida)
         self.assertNotIn("Última entrada: novos", saida)
+
+
+class TestDiaDaSemana(unittest.TestCase):
+    """A página muda com o dia: segunda abre a semana, sexta fecha, fim de semana fica leve."""
+
+    def setUp(self):
+        self.e = Empresa("completa")
+
+    def tearDown(self):
+        self.e.fechar()
+
+    def _pagina(self, data):
+        codigo, saida = rodar("rotina", "--pasta", self.e.pasta, "--data", data)
+        self.assertEqual(codigo, 0, saida)
+        return (self.e.pasta / "hoje.md").read_text(encoding="utf-8")
+
+    def test_terca_e_so_o_dia(self):
+        pagina = self._pagina(REF)
+        self.assertTrue(pagina.startswith("# Terça, 03/11/2026"))
+        self.assertNotIn("## A semana", pagina)
+        self.assertNotIn("## Como foi a semana", pagina)
+        self.assertNotIn("## Fim de semana", pagina)
+
+    def test_segunda_abre_a_semana_com_o_que_sobrou(self):
+        self._pagina(REF)
+        pagina = self._pagina(dias(6))  # 2026-11-09
+        self.assertTrue(pagina.startswith("# Segunda, 09/11/2026"))
+        self.assertIn("## A semana", pagina)
+        self.assertRegex(pagina, r"- O mais crucial: CONTA-\d+")
+        self.assertRegex(pagina, r"- Da semana passada (ficou 1 tarefa aberta|ficaram \d+ tarefas abertas): estão em Para fazer")
+        self.assertNotRegex(pagina, r"passada \d+ fica")
+
+    def test_leitura_em_branco_ate_a_pessoa_escrever(self):
+        pagina = self._pagina(dias(6))
+        self.assertIn("- A leitura da semana ainda está em branco.", pagina)
+        semana = self.e.pasta / "2-metas" / "semana-2026-11-09.md"
+        semana.write_text(semana.read_text(encoding="utf-8").replace(MARCA_LEITURA, "A carteira segurou."), encoding="utf-8")
+        self.assertNotIn("A leitura da semana ainda está em branco", self._pagina(dias(6)))
+
+    def test_sexta_fecha_a_semana(self):
+        self._pagina(REF)
+        self.assertEqual(rodar("tarefas", "--pasta", self.e.pasta, "--feita", "T-001", "--data", dias(1))[0], 0)
+        item = itens_da_mesa(self.e.pasta)[0]["item"]
+        self.assertEqual(rodar("decidir", "--pasta", self.e.pasta, "--item", item, "--decisao", "recusado", "--data", dias(2))[0], 0)
+        pagina = self._pagina(dias(3))  # 2026-11-06
+        self.assertTrue(pagina.startswith("# Sexta, 06/11/2026"))
+        self.assertIn("## Como foi a semana", pagina)
+        self.assertRegex(pagina, r"- Tarefas da semana: 1 de \d+ feitas\.")
+        self.assertRegex(pagina, r"- Mesa: 1 decisão nesta semana e \d+ em aberto\.")
+        self.assertNotIn("## A semana", pagina)
+
+    def test_fim_de_semana_sem_agenda(self):
+        self._pagina(REF)
+        pagina = self._pagina(dias(4))  # 2026-11-07
+        self.assertTrue(pagina.startswith("# Sábado, 07/11/2026"))
+        self.assertIn("## Fim de semana", pagina)
+        self.assertNotIn("## Como foi a semana", pagina)
+
+    def test_item_parado_na_mesa_ganha_a_marca(self):
+        self._pagina(REF)
+        self.assertNotIn("Está na mesa há", self._pagina(dias(3)))  # 3 dias ainda não é parado
+        self.assertIn("Está na mesa há 4 dias.", self._pagina(dias(4)))
+
+    def test_sem_rodada_o_titulo_tambem_e_o_dia(self):
+        vazia = Empresa("completa")
+        self.addCleanup(vazia.fechar)
+        shutil.rmtree(vazia.entrada)
+        vazia.entrada.mkdir()
+        codigo, saida = rodar("rotina", "--pasta", vazia.pasta, "--data", REF)
+        self.assertEqual(codigo, 0, saida)
+        self.assertIn("# Terça, 03/11/2026", saida)
 
 
 class TestUrgentes(unittest.TestCase):

@@ -46,6 +46,16 @@ Se a tabela Oportunidades de `4-dados/como-medir.md` estiver vazia, pergunte à 
 
 Ao contar o que apareceu, deixe claro que a rodada aponta onde olhar. Se a área já está no plano do cliente, é adoção, não upgrade. Conta com sinal de insatisfação resolve isso primeiro. Para mostrar à liderança, use o mapa: a situação, o valor estimado e o próximo passo são da pessoa, e você nunca estima valor.
 
+## Antes de qualquer conversa: o resumo da conta
+
+Para uma ligação, um check-in ou qualquer conversa que não precise de roteiro, comece pelo resumo de uma página:
+
+```
+python "${CLAUDE_PLUGIN_ROOT}/scripts/cs.py" resumo --pasta "<pasta>" --conta CONTA-017
+```
+
+Ele junta os últimos 90 dias: a nota e para onde ela foi, as rotinas que subiram ou caíram, o que já ganharam, o que está em aberto, quem é quem, a última conversa e o que perguntar. Tudo sai das rodadas e da ficha, sem número inventado. No modo protegido, a pessoa abre `com-nomes/resumo-CONTA-017-AAAA-MM-DD.md`, com os nomes reais. Conte o essencial em poucas linhas e não acrescente número que não está no resumo. Depois da conversa, o que for combinado vai para a ficha: o resumo é refeito a cada vez.
+
 ## Passo 2: preparar a reunião
 
 Combine com a pessoa qual conta e qual o tipo de conversa: `revisao`, `renovacao` ou `expansao`.

@@ -44,7 +44,7 @@ python "${CLAUDE_PLUGIN_ROOT}/scripts/cs.py" receber --pasta "<pasta>" --arquivo
 
 Sem `--data`, o arquivo vai para a pasta com a data de hoje. Um arquivo por sistema: contas, financeiro, chamados. O `receber` copia: no modo protegido, avise que o original continua onde estava e que a pessoa pode apagar ou mover.
 
-Com as colunas já ligadas, a pessoa também pode deixar o export em `4-dados/entradas/novos`: o comando `rotina` guarda e roda, e `/gestao-de-cs:hoje` faz isso. O nome do arquivo precisa bater com o que está em `colunas.md`, e um `*` no nome aceita variação, como `contas*.csv`.
+Com as colunas já ligadas, a pessoa também pode deixar o export em `4-dados/entradas/novos`: o comando `rotina` guarda e roda, e `/gestao-de-cs:central` faz isso ao abrir o dia. O nome do arquivo precisa bater com o que está em `colunas.md`, e um `*` no nome aceita variação, como `contas*.csv`.
 
 Peça também as contas canceladas, com a data de saída. Sem elas, não dá para saber o churn nem fazer o teste da conta perdida.
 

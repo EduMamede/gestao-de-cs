@@ -21,7 +21,7 @@ Pasta criada em {{DATA}} pela skill gestao-de-cs. É a memória comum dos agente
 
 | pasta | o que guarda | quem usa |
 | --- | --- | --- |
-| `hoje.md` | a página do dia, refeita pelo script. Escrever aqui não adianta | você, com `/gestao-de-cs:hoje` |
+| `hoje.md` | a página do dia, refeita pelo script. Escrever aqui não adianta | você, com `/gestao-de-cs:central` |
 | `mesa.md` | o que os agentes prepararam e a sua decisão | você decide, e o script só anota |
 | `tarefas.md` | a lista do que fazer, até quando e quem faz | você marca o que fez |
 | `1-empresa/` | perfil, estratégia, jornada e o que foi conversado | Consultor de CS |
